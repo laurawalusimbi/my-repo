@@ -1,0 +1,27 @@
+{% load staticfiles %}
+
+
+<html>
+    <head>
+        <title>
+            {% block head_title %}Django Girl's blog{% endblock %}</title>
+    </head>
+    <body>
+        <div class="page-header">
+            <a href="{% url 'blog.views.post_new' %}", class="top-menu">
+        <h1>
+            {% block title %}Welcome to Django Girl's blog{% endblock %}</a>
+        </h1>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col-md-8">
+                   {% block content %}
+
+                   {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
